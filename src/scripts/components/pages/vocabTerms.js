@@ -2,7 +2,7 @@ import clearDom from '../../helpers/clearDom';
 import renderToDom from '../../helpers/renderToDom';
 
 const emptyCards = () => {
-  const domString = '<h1>No Items</h1>';
+  const domString = '<h1>No Entries Available.</h1>';
   renderToDom('#store', domString);
 };
 
@@ -20,6 +20,8 @@ const showCards = (array) => {
         <div class="card-body">
           <h5 class="card-title">${item.title}</h5>
           <p class="card-text">${item.definition}</p>
+          <i id="edit-book-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
+          <i id="delete-book-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
           <a href="#" class="card-link">Edit/a>
           <a href="#" class="card-link">Delete</a>
         </div>
