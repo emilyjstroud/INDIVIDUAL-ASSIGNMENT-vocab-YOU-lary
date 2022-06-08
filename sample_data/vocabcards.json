@@ -1,0 +1,33 @@
+{
+  "-M1234lO" : {
+  "title" : "Mushroom",
+  "firebaseKey": "-M1234lO",
+  "definition": "A mushroom or toadstool is the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground, on soil, or on its food source.",
+  "category": "Fungi",
+  "uid":""
+},
+
+"-M5678lO" : {
+  "title" : "Oyster",
+  "firebaseKey": "-M5678lO",
+  "definition" : "Pleurotus ostreatus, the oyster mushroom, oyster fungus, or hiratake, is a common edible mushroom.[2] It was first cultivated in Germany as a subsistence measure during World War I[3] and is now grown commercially around the world for food. ",
+  "category" : "Culinary Fungi",
+  "uid" : ""
+},
+
+"-M12344lO" : {
+  "title" : "Morel",
+  "firebaseKey": "-M12344lO",
+  "definition" : "Morchella, the true morels, is a genus of edible sac fungi closely related to anatomically simpler cup fungi in the order Pezizales. These distinctive fungi have a honeycomb appearance due to the network of ridges with pits composing their caps. ",
+  "category" : "Culinary Fungi",
+  "uid" : ""
+},
+
+"-M12367lO" : {
+  "title" : "Cremini",
+  "firebaseKey": "-M12367lO",
+  "definition" : "Agaricus bisporus is an edible basidiomycete mushroom native to grasslands in Europe and North America. It has two color states while immature: white and brown, both of which have various names, with additional names for the mature state.",
+  "category" : "Culinary Fungi",
+  "uid" : ""
+}
+}
