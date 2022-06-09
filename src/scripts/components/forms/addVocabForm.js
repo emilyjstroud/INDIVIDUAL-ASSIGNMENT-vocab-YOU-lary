@@ -17,7 +17,7 @@ const addVocabForm = (obj = {}) => {
         <label for="category">Category</label>
         <input type="text" class="form-control" id="category" placeholder="Category" value="${obj.category || ''}" required>
       </div>
-      <div class="form-group" id="select-author">
+      <div class="form-group" id="submit">
       </div>
       <button type="submit" class="btn btn-primary">Submit Term
       </button>
