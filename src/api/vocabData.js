@@ -6,8 +6,8 @@ import firebaseConfig from './apiKeys';
 const dbUrl = firebaseConfig.databaseURL;
 
 // GET VOCAB CARDS
-const getVocabCards = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/cards.json?orderBy="uid"&equalTo="${uid}"`)
+const getVocabCards = () => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/cards.json`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));
@@ -19,6 +19,13 @@ const getVocabCards = (uid) => new Promise((resolve, reject) => {
 });
 
 // DELETE CARDS (entry)
+const deleteCard = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/cards/${firebaseKey}.json`)
+    .then(() => {
+      getVocabCards().then((cardsArray) => resolve(cardsArray));
+    })
+    .catch((error) => reject(error));
+});
 
 // CREATE ENTRY (card)
 const createEntry = (cardObj) => new Promise((resolve, reject) => {
@@ -35,5 +42,12 @@ const createEntry = (cardObj) => new Promise((resolve, reject) => {
 // GET SINGLE ENTRY
 
 // UPDATE ENTRY
+const updateEntry = (cardObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/cards/${cardObj.firebaseKey}.json`, cardObj)
+    .then(() => getVocabCards().then(resolve))
+    .catch(reject);
+});
 
-export { getVocabCards, createEntry };
+export {
+  getVocabCards, deleteCard, createEntry, updateEntry
+};
