@@ -1,7 +1,7 @@
 import clearDom from '../../helpers/clearDom';
 import renderToDom from '../../helpers/renderToDom';
 
-const addVocabForm = (obj = {}) => {
+const addVocabForm = (uid, obj = {}) => {
   clearDom();
   const domString = `
   <form id="${obj.firebaseKey ? `update-card--${obj.firebaseKey}` : 'submit-card'}" class="mb-4">
