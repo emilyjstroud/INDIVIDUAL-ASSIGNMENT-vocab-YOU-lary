@@ -1,8 +1,11 @@
+import renderToDom from '../../helpers/renderToDom';
+
 const intro = () => {
-  document.querySelector('#app').innerHTML = `
-    <h1>Welcome to vocab-YOU-lary!</h1>
-    <h2>Sign in to get started.</h2>
-  `;
+  const domString = `
+    <div class="card" style="width: 18rem;">
+      <img src="../assets/voccab.jpg" alt="vocab-you-lary logo">
+    <div>`;
+  renderToDom('#main-container', domString);
 };
 
 export default intro;
