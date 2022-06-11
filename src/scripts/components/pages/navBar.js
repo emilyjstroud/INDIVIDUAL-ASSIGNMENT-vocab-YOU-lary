@@ -21,9 +21,6 @@ const navBar = () => {
           <li class="nav-item">
             <a class="nav-link" href="#" id="all-terms">See All Entries</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="sign-out">Sign Out</a>
-          </li>
           <li>
           <input
             class="form-control mr-sm-2"
@@ -35,7 +32,7 @@ const navBar = () => {
         </ul>
         <span class="navbar-text">
           <div id="cart-button"></div>
-          <div id="logout-button"></div>
+          <div id="google-auth"></div>
         </span>
       </div>
       </div>

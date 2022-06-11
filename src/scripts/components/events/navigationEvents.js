@@ -1,4 +1,5 @@
 import { getVocabCards } from '../../../api/vocabData';
+// import clearDom from '../../helpers/clearDom';
 import signOut from '../../helpers/signOut';
 import addVocabForm from '../forms/addVocabForm';
 import intro from '../pages/intro';
@@ -29,5 +30,10 @@ const navEvents = () => {
     getVocabCards().then((cardsArray) => showCards(cardsArray));
   });
 };
+
+// FILTER EVENTS
+// document.querySelector('#filter-buttons').addEventListener('click', (e) => {
+//   console.warn('YOU CLICKED CULINARY FUNGI BTN', e.target.id);
+// });
 
 export default navEvents;

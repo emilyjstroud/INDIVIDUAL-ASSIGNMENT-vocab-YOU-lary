@@ -48,6 +48,12 @@ const updateEntry = (cardObj) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/cards/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
+
 export {
-  getVocabCards, deleteCard, createEntry, updateEntry
+  getVocabCards, deleteCard, createEntry, updateEntry, getSingleCard
 };
